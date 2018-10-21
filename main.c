@@ -1,16 +1,26 @@
 #include <time.h>
 #include <stdio.h>
+#include <float.h>
 
 int main (void) {
 
-    int i;
+    int i,a;
     float x = 0.0;
 
 
-    for ( i =0 ; i < i+1 ; i++ ) {
-        printf("i = %d\n x = %f",i,x);
-x++;
+    for ( i =2147483641 ; i > 0 ; i++ ) { //zähler von limit int (2³²-7) bis kleiner null
+       // printf("i = %d\n",i);
+
     }
+
+
+    for (a = 0; a < a+1; a++){      //Unendlichkeitsschleife um floatmax zu bestimmen (Alternativ FLT_MAX aus float.h benutzen)
+        //printf("x = %f\n",x);
+     x++;
+
+    }
+    printf("i max = %d\n",i-1);    //da i kleiner null, mit -1 overflow zu größer null generieren
+    printf("x max = %f\n",x);      //warum porgramm beendet, keine ahnung alternativ FLT_MAX benutzen
     return 0;
 
 }
